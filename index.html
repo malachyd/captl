@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,9 +17,98 @@
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CAPTL" />
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+
+<script type="text/javascript">
+
+/* <![CDATA[ */
+
+$(function() {
+
+  $('#slides').cycle({
+  
+      fx:     'fade',
+  
+      speed:   1000,
+  
+      timeout: 100,
+      
+      autostop: 4
+  
+    });
+
+
+    
+
+});
+
+$(document).ready(function() {
+  
+  //$('#slideshow').fadeIn(1000);
+  $("#slideshow").delay(500).fadeIn(400);
+  $("#legal").delay(750).fadeIn(400);
+  
+  jQuery.preLoadImages("intro-images/1.jpg", "intro-images/2.jpg", "intro-images/menu.jpg", "imgs/4.jpg");
+  
+});
+
+(function($) {
+  var cache = [];
+  // Arguments are image paths relative to the current page.
+  $.preLoadImages = function() {
+    var args_len = arguments.length;
+    for (var i = args_len; i--;) {
+      var cacheImage = document.createElement('img');
+      cacheImage.src = arguments[i];
+      cache.push(cacheImage);
+    }
+  }
+})(jQuery)
+
+
+
+/* ]]> */
+
+</script>
 </head>
 <body>
-
+<br>
+<br>
+<table width="972" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ffffff">
+<tbody>
+<tr>
+<td class="Box">
+<div id="slideshow" style="display: block;">
+<div id="slides" class="pics" style="position: relative; width: 792px; height: 528px;">
+<img src="intro-images/1.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;">
+<img src="intro-images/2.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 792px; height: 528px;">
+<div style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1; width: 792px; heightL 528px;">
+<div id="enter_shirts">
+<a href="index_shirts.html">
+<img src="imgs/spacer.gif" width="315" height="35">
+</a>
+</div>
+<img src="intro-image/menu.jpg" width="792" height="528">
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div id="legal" style="display: block;">  
+  <table width="792" align="center">
+  <tbody><tr>
+    
+     <td height="40" valign="bottom"><a href="index.html"><img src="captl_logo.jpg" alt="CAPTL" width="171" height="15" border="0"></a></td>
+      <td align="right" valign="bottom"><a href="contact.html">contact</a></td>
+  
+ </tr>
+</tbody></table>
+  </div>
+  <br>
+  <span class="style6">
+  
+    </span>
 </body>
 
 </html>

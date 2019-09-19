@@ -10,19 +10,110 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+ head {
+    display: none;
+}
+html {
+    color: -internal-root-color;
+}
 body {
   font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #111;
-  background-color: #fdfdfd;
+  background-color: #FFFFFF;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
-  display: flex;
+  display: block;
+  margin: 8px;
+  margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
   min-height: 100vh;
   flex-direction: column; }
+  table[Attributes Style] {
+    width: 792px;
+    border-top-width: 0px;
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    border-top-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+}
+table {
+    display: table;
+    border-collapse: separate;
+    white-space: normal;
+    line-height: normal;
+    font-weight: normal;
+    font-size: medium;
+    font-style: normal;
+    color: -internal-quirk-inherit;
+    text-align: start;
+    border-spacing: 2px;
+    border-color: grey;
+    font-variant: normal;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.Box {
+    border-color: #E9E9E9;
+    border-width: 0px;
+    border-style: solid;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+#enter_shirts {
+    position: absolute;
+    background: 0x000000;
+    color: #222;
+    width: 115px;
+    height: 32px;
+    left: 320px;
+    top: 190px;
+}
+A:VISITED {
+    text-decoration: none;
+    color: #999999;
+}
+A:LINK {
+    text-decoration: none;
+    color: #999999;
+}
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+img[Attributes Style] {
+    width: 315px;
+    height: 35px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+#slideshow {
+    position: relative;
+    width: 790px;
+    display: none;
+}
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
@@ -32,6 +123,7 @@ p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
   margin-bottom: 15px; }
+
 
 /**
  * `main` element
