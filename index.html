@@ -33,35 +33,93 @@ body {
  <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
 
 <script type="text/javascript">
-        /* <![CDATA[ */
+       /* <![CDATA[ */
 
-        $(function() {
+$(function() {
 
-                    $('#pause').click(function() {
-                        $('#slides').cycle('pause');
-                        return false;
-                    });
+    $('#pause').click(function() {
+        $('#slides').cycle('pause');
+        return false;
+    });
 
-                    $('#play').click(function() {
-                        $('#slides').cycle('resume');
-                        return false;
-                    });
+    $('#play').click(function() {
+        $('#slides').cycle('resume');
+        return false;
+    });
 
-                    $("#prev").mouseover(
-                        function() {
-                            $('#slides').cycle('pause');
-                            return false;
-                        }
-                    );
+    $("#prev").mouseover(
+        function() {
+            $('#slides').cycle('pause');
+            return false;
+        }
+    );
 
-                    $("#prev").mouseout(
-                        function() {
-                            $('#slides').cycle('resume');
-                            return false;
-                        }
-                    );
+    $("#prev").mouseout(
+        function() {
+            $('#slides').cycle('resume');
+            return false;
+        }
+    );
 
-                    $("#next").mouseov truncated 1062 bytes...
+    $("#next").mouseover(
+        function() {
+            $('#slides').cycle('pause');
+            return false;
+        }
+    );
+
+    $("#next").mouseout(
+        function() {
+            $('#slides').cycle('resume');
+            return false;
+        }
+    );
+
+    $('#slideshow').hover(
+
+        function() {
+            $('#controls').fadeIn();
+
+            var paused = slideshow.is(':paused');
+            slideshow.cycle(paused ? 'resume' : 'pause', true);
+        },
+
+        function() {
+            $('#controls').fadeOut();
+        }
+
+    );
+
+
+    $('#slides').cycle({
+
+        fx: 'fade',
+
+        speed: 1500,
+
+        timeout: 3000,
+
+        next: '#next',
+
+        prev: '#prev',
+
+        pause: true
+
+    });
+
+});
+
+
+
+
+
+$(document).ready(function() {
+
+    $('#slideshow').fadeIn(1000);
+
+});
+
+/* ]]> */
     </script>
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
@@ -196,7 +254,7 @@ body {
                 <td height="40" valign="bottom">
                     <a href="index.html"><img src="captl_logo.jpg" alt="CAPTL" width="171" height="15" border="0"></a>
                 </td>
-                <td align="right" valign="bottom" class="ShoeDetailText"><a href="stores.asp">stockists</a> &nbsp;<a href="login.asp"> log-in </a>&nbsp; <a href="contact.html">contact</a></td>
+                <td align="right" valign="bottom" class="ShoeDetailText"><a href="stores.asp">stockists</a> &nbsp;<a href="login.asp"> log-in </a>&nbsp; <a href="contact.html">contaaaaaact</a></td>
             </tr>
         </tbody>
     </table>
