@@ -5,6 +5,15 @@
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   
 <title>CAPTL</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+ <script type="text/javascript" src="fadeslideshow.js">
+        /***********************************************
+         * Ultimate Fade In Slideshow v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+         * This notice MUST stay intact for legal use
+         * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+         ***********************************************/
+        http: //ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js
+    </script>
 <style type="text/css">
 <!--
 body {
@@ -12,7 +21,7 @@ body {
 }
 -->
 </style>
-<link href="/assets/css.css"><link type="text/css"/>
+<link href="css.css" rel="stylesheet" type="text/css"/>
 <style type="text/css">
         <!-- .style6 {
             color: #E9E9E9
@@ -20,103 +29,262 @@ body {
         
         -->
     </style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+ <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+
 <script type="text/javascript">
-  
-</script>
+        /* <![CDATA[ */
+
+        $(function() {
+
+                    $('#pause').click(function() {
+                        $('#slides').cycle('pause');
+                        return false;
+                    });
+
+                    $('#play').click(function() {
+                        $('#slides').cycle('resume');
+                        return false;
+                    });
+
+                    $("#prev").mouseover(
+                        function() {
+                            $('#slides').cycle('pause');
+                            return false;
+                        }
+                    );
+
+                    $("#prev").mouseout(
+                        function() {
+                            $('#slides').cycle('resume');
+                            return false;
+                        }
+                    );
+
+                    $("#next").mouseov truncated 1062 bytes...
+    </script>
 
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
-
-<script type="text/javascript">
-
-/* <![CDATA[ */
-
-$(function() {
-
-  $('#slides').cycle({
-  
-      fx:     'fade',
-  
-      speed:   1000,
-  
-      timeout: 100,
-      
-      autostop: 4
-  
-    });
-
-
-    
-
-});
-
-$(document).ready(function() {
-  
-  //$('#slideshow').fadeIn(1000);
-  $("#slideshow").delay(500).fadeIn(400);
-  $("#legal").delay(750).fadeIn(400);
-  
-  jQuery.preLoadImages("intro-images/1.jpg", "intro-images/2.jpg", "intro-images/menu.jpg", "imgs/4.jpg");
-  
-});
-
-(function($) {
-  var cache = [];
-  // Arguments are image paths relative to the current page.
-  $.preLoadImages = function() {
-    var args_len = arguments.length;
-    for (var i = args_len; i--;) {
-      var cacheImage = document.createElement('img');
-      cacheImage.src = arguments[i];
-      cache.push(cacheImage);
-    }
-  }
-})(jQuery)
-
-
-
-/* ]]> */
-
-</script>
 </head>
+
 <body>
-<br>
-<br>
-<table width="972" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ffffff">
-<tbody>
-<tr>
-<td class="Box">
-<div id="slideshow" style="display: block;">
-<div id="slides" class="pics" style="position: relative; width: 792px; height: 528px;">
-<img src="intro-images/1.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;">
-<img src="intro-images/2.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 792px; height: 528px;">
-<div style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1; width: 792px; heightL 528px;">
-<div id="enter_shirts">
-<a href="index_shirts.html">
-<img src="imgs/spacer.gif" width="315" height="35">
-</a>
-</div>
-<img src="intro-image/menu.jpg" width="792" height="528">
-</div>
-</div>
-</div>
-</td>
-</tr>
-</tbody>
-</table>
-<div id="legal" style="display: block;">  
-  <table width="792" align="center">
-  <tbody><tr>
-    
-     <td height="40" valign="bottom"><a href="index.html"><img src="captl_logo.jpg" alt="CAPTL" width="171" height="15" border="0"></a></td>
-      <td align="right" valign="bottom"><a href="contact.html">contact</a></td>
-  
- </tr>
-</tbody></table>
-  </div>
-  <br>
-  <span class="style6">
+
+    <br>
+    <br>
+    <table width="792" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ffffff">
+        <tbody>
+            <tr>
+                <td class="Box">
+                    <div id="slideshow" style="display: block;">
+
+                        <div id="controls" style="display: none;">
+
+                            <div id="bg"></div>
+
+                            <span><a href="" id="prev">prev</a></span>
+
+                            <!--<span id="paused">paused</span>-->
+
+                            <span><a href="" id="next">next</a></span>
+
+                            <!--<span><a href="" id="pause">Pause</a></span>
+
+        <span><a href="" id="play">Play</a></span>-->
+
+                        </div>
+
+                        <div id="slides" class="pics" style="position: relative; width: 792px; height: 528px;">
+                            <img src="intro-images/MAN.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 85; opacity: 0;">
+                            <img src="man-images/1.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 86; opacity: 1; width: 792px; height: 528px;">
+                            <img src="man-images/2.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 83; opacity: 0;">
+                            <img src="man-images/3.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 82; opacity: 0;">
+                            <img src="man-images/4.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 81; opacity: 0;">
+                            <img src="man-images/5.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 80; opacity: 0;">
+                            <img src="man-images/6.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 79; opacity: 0;">
+                            <img src="man-images/7.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 78; opacity: 0;">
+                            <img src="man-images/8.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 77; opacity: 0;">
+                            <img src="man-images/9.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 76; opacity: 0;">
+                            <img src="man-images/10.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 75; opacity: 0;">
+                            <img src="man-images/11.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 74; opacity: 0;">
+                            <img src="man-images/12.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 73; opacity: 0;">
+                            <img src="man-images/13.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 72; opacity: 0;">
+                            <img src="man-images/14.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 71; opacity: 0;">
+                            <img src="man-images/15.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 70; opacity: 0;">
+                            <img src="man-images/16.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 69; opacity: 0;">
+                            <img src="man-images/17.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 68; opacity: 0;">
+                            <img src="man-images/18.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 67; opacity: 0;">
+                            <img src="man-images/19.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 66; opacity: 0;">
+                            <img src="man-images/20.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 65; opacity: 0;">
+                            <img src="man-images/21.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 64; opacity: 0;">
+                            <img src="man-images/22.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 63; opacity: 0;">
+                            <img src="man-images/23.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 62; opacity: 0;">
+                            <img src="man-images/24.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 61; opacity: 0;">
+                            <img src="man-images/25.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 60; opacity: 0;">
+                            <img src="man-images/26.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 59; opacity: 0;">
+                            <img src="man-images/27.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 58; opacity: 0;">
+                            <img src="man-images/28.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 57; opacity: 0;">
+                            <img src="man-images/29.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 56; opacity: 0;">
+                            <img src="man-images/30.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 55; opacity: 0;">
+                            <img src="man-images/31.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 54; opacity: 0;">
+                            <img src="man-images/32.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 53; opacity: 0;">
+                            <img src="man-images/33.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 52; opacity: 0;">
+                            <img src="man-images/34.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 51; opacity: 0;">
+                            <img src="man-images/35.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 50; opacity: 0;">
+                            <img src="man-images/36.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 49; opacity: 0;">
+                            <img src="man-images/37.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 48; opacity: 0;">
+                            <img src="man-images/38.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 47; opacity: 0;">
+                            <img src="man-images/39.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 46; opacity: 0;">
+                            <img src="man-images/40.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 45; opacity: 0;">
+                            <img src="man-images/41.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 44; opacity: 0;">
+                            <img src="man-images/42.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 43; opacity: 0;">
+                            <img src="man-images/43.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 42; opacity: 0;">
+
+
+
+                            <img src="man-images/44.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 41; opacity: 0;">
+                            <img src="man-images/45.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 40; opacity: 0;">
+                            <img src="man-images/46.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 39; opacity: 0;">
+                            <img src="man-images/47.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 38; opacity: 0;">
+                            <img src="man-images/48.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 37; opacity: 0;">
+                            <img src="man-images/49.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 36; opacity: 0;">
+                            <img src="man-images/50.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 35; opacity: 0;">
+                            <img src="man-images/51.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 34; opacity: 0;">
+                            <img src="man-images/52.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 33; opacity: 0;">
+                            <img src="man-images/53.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 32; opacity: 0;">
+                            <img src="man-images/54.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 31; opacity: 0;">
+                            <img src="man-images/55.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 30; opacity: 0;">
+                            <img src="man-images/56.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 29; opacity: 0;">
+                            <img src="man-images/57.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 28; opacity: 0;">
+                            <img src="man-images/58.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 27; opacity: 0;">
+                            <img src="man-images/59.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 26; opacity: 0;">
+                            <img src="man-images/60.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 25; opacity: 0;">
+                            <img src="man-images/61.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 24; opacity: 0;">
+                            <img src="man-images/62.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 23; opacity: 0;">
+                            <img src="man-images/63.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 22; opacity: 0;">
+                            <img src="man-images/64.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 21; opacity: 0;">
+                            <img src="man-images/65.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 20; opacity: 0;">
+                            <img src="man-images/66.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 19; opacity: 0;">
+                            <img src="man-images/67.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 18; opacity: 0;">
+                            <img src="man-images/68.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 17; opacity: 0;">
+                            <img src="man-images/69.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 16; opacity: 0;">
+                            <img src="man-images/70.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 15; opacity: 0;">
+                            <img src="man-images/71.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 14; opacity: 0;">
+                            <img src="man-images/72.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 13; opacity: 0;">
+                            <img src="man-images/73.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 12; opacity: 0;">
+                            <img src="man-images/74.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 11; opacity: 0;">
+                            <img src="man-images/75.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 10; opacity: 0;">
+                            <img src="man-images/76.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 9; opacity: 0;">
+                            <img src="man-images/77.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 8; opacity: 0;">
+                            <img src="man-images/78.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 7; opacity: 0;">
+                            <img src="man-images/79.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 6; opacity: 0;">
+                            <img src="man-images/80.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 5; opacity: 0;">
+                            <img src="man-images/81.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 4; opacity: 0;">
+                            <img src="man-images/82.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0;">
+                            <img src="man-images/83.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0;">
+                            <img src="man-images/84.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 1; opacity: 0;">
+
+                        </div>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="792" align="center">
+        <tbody>
+            <tr>
+                <td height="40" valign="bottom">
+                    <a href="index.html"><img src="imgs/CP LOGO.jpg" alt="Common Projects" width="171" height="15" border="0"></a>
+                </td>
+                <td align="right" valign="bottom" class="ShoeDetailText"><a href="stores.asp">stockists</a> &nbsp;<a href="login.asp"> log-in </a>&nbsp; <a href="contact.html">contact</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <span class="style6">
   
     </span>
+
+    <!--   
+<script type="text/javascript">
+
+
+
+var mygallery=new fadeSlideShow({
+  wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
+  dimensions: [792, 528], //width/height of gallery in pixels. Should reflect dimensions of largest image
+  imagearray: [ 
+    ["images/1.jpg", "", "", "Paused"], 
+    ["images/2.jpg", "", "", "Paused"],
+    ["images/3.jpg", "", "", "Paused"],
+    ["images/4.jpg", "", "", "Paused"],
+    ["images/5.jpg", "", "", "Paused"],
+    ["images/6.jpg", "", "", "Paused"],
+    ["images/7.jpg", "", "", "Paused"],
+    ["images/8.jpg", "", "", "Paused"],
+    ["images/9.jpg", "", "", "Paused"],
+    ["images/10.jpg", "", "", "Paused"],
+    ["images/11.jpg", "", "", "Paused"],
+    ["images/12.jpg", "", "", "Paused"],
+    ["images/13.jpg", "", "", "Paused"],
+    ["images/14.jpg", "", "", "Paused"],
+    ["images/15.jpg", "", "", "Paused"],
+    ["images/16.jpg", "", "", "Paused"],
+    ["images/17.jpg", "", "", "Paused"],
+    ["images/18.jpg", "", "", "Paused"],
+    ["images/19.jpg", "", "", "Paused"],
+    ["images/20.jpg", "", "", "Paused"],
+    ["images/21.jpg", "", "", "Paused"],
+    ["images/22.jpg", "", "", "Paused"],
+        ["images/0024.jpg", "", "", "Paused"],
+    ["images/0025.jpg", "", "", "Paused"],
+    ["images/0026.jpg", "", "", "Paused"],
+    ["images/0027.jpg", "", "", "Paused"],
+    ["images/0028.jpg", "", "", "Paused"],
+    ["images/0029.jpg", "", "", "Paused"],
+    ["images/0030.jpg", "", "", "Paused"],
+    ["images/0031.jpg", "", "", "Paused"],
+    ["images/0032.jpg", "", "", "Paused"],
+    ["images/0033.jpg", "", "", "Paused"],
+    ["images/0034.jpg", "", "", "Paused"],
+    ["images/0035.jpg", "", "", "Paused"],
+    ["images/0036.jpg", "", "", "Paused"],
+    ["images/0037.jpg", "", "", "Paused"],
+    ["images/0038.jpg", "", "", "Paused"],
+    ["images/0039.jpg", "", "", "Paused"],
+    ["images/0040.jpg", "", "", "Paused"],
+    ["images/0041.jpg", "", "", "Paused"],
+    ["images/0042.jpg", "", "", "Paused"],
+    ["images/0043.jpg", "", "", "Paused"],
+    ["images/0044.jpg", "", "", "Paused"],
+    ["images/0045.jpg", "", "", "Paused"],
+    ["images/0046.jpg", "", "", "Paused"],
+    ["images/0047.jpg", "", "", "Paused"],
+    ["images/0048.jpg", "", "", "Paused"],
+    ["images/0049.jpg", "", "", "Paused"],
+    ["images/0050.jpg", "", "", "Paused"]
+    //<--no trailing comma after very last image element!
+  ],
+  displaymode: {type:'auto', pause:3000, cycles:100, wraparound:false},
+  persist: false, //remember last viewed slide and recall within same session?
+  fadeduration: 1500, //transition duration (milliseconds)
+  descreveal: "ondemand",
+  togglerid: ""
+})
+
+
+</script> -->
+
+
+
+    
+    <script type="text/javascript">
+        _uacct = "UA-117225-5";
+        urchinTracker();
+    </script>
+
+
 </body>
 
 </html>
