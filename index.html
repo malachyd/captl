@@ -9,7 +9,96 @@
 <script type="text/javascript" src="fadeslideshow.js"></script>
 <link href="/assets/css.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
-<script type="text/javascript" src="clickthru.js"></script>
+<script type="text/javascript">
+  
+   /* <![CDATA[ */
+
+$(function() {
+
+    $('#pause').click(function() {
+        $('#slides').cycle('pause');
+        return false;
+    });
+
+    $('#play').click(function() {
+        $('#slides').cycle('resume');
+        return false;
+    });
+
+    $("#prev").mouseover(
+        function() {
+            $('#slides').cycle('pause');
+            return false;
+        }
+    );
+
+    $("#prev").mouseout(
+        function() {
+            $('#slides').cycle('resume');
+            return false;
+        }
+    );
+
+    $("#next").mouseover(
+        function() {
+            $('#slides').cycle('pause');
+            return false;
+        }
+    );
+
+    $("#next").mouseout(
+        function() {
+            $('#slides').cycle('resume');
+            return false;
+        }
+    );
+
+    $('#slideshow').hover(
+
+        function() {
+            $('#controls').fadeIn();
+
+            var paused = slideshow.is(':paused');
+            slideshow.cycle(paused ? 'resume' : 'pause', true);
+        },
+
+        function() {
+            $('#controls').fadeOut();
+        }
+
+    );
+
+
+    $('#slides').cycle({
+
+        fx: 'fade',
+
+        speed: 1500,
+
+        timeout: 3000,
+
+        next: '#next',
+
+        prev: '#prev',
+
+        pause: true
+
+    });
+
+});
+
+
+
+
+
+$(document).ready(function() {
+
+    $('#slideshow').fadeIn(1000);
+
+});
+
+/* ]]> */
+</script>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
 </head>
 
@@ -23,9 +112,9 @@
               <div id="slideshow" style="display: block;">
                  <div id="controls" style="display: none;">
                     <div id="bg"></div>
-                      <span><a href="" id="prev"> + $</a></span>
+                      <span><a href="" id="prev">prev</a></span>
                         <!--<span id="paused">paused</span>-->
-                      <span><a href="" id="next"> - $</a></span>
+                      <span><a href="" id="next">next</a></span>
                           <!--<span><a href="" id="pause">Pause</a></span>
                           <span><a href="" id="play">Play</a></span>-->
                   </div>
@@ -48,7 +137,69 @@
     </table>
 <br>
 <span class="style6"></span> 
-<script type="text/javascript" src="fadeshow.js"></script>
+<script type="text/javascript">
+  var mygallery=new fadeSlideShow({
+  wrapperid: "slides", //ID of blank DIV on page to house Slideshow
+  dimensions: [792, 528], //width/height of gallery in pixels. Should reflect dimensions of largest image
+  imagearray: [ 
+    ["intro-images/1.jpg", "", "", "Paused"], 
+    ["images/2.jpg", "", "", "Paused"],
+    ["images/3.jpg", "", "", "Paused"],
+    ["images/4.jpg", "", "", "Paused"],
+    ["images/5.jpg", "", "", "Paused"],
+    ["images/6.jpg", "", "", "Paused"],
+    ["images/7.jpg", "", "", "Paused"],
+    ["images/8.jpg", "", "", "Paused"],
+    ["images/9.jpg", "", "", "Paused"],
+    ["images/10.jpg", "", "", "Paused"],
+    ["images/11.jpg", "", "", "Paused"],
+    ["images/12.jpg", "", "", "Paused"],
+    ["images/13.jpg", "", "", "Paused"],
+    ["images/14.jpg", "", "", "Paused"],
+    ["images/15.jpg", "", "", "Paused"],
+    ["images/16.jpg", "", "", "Paused"],
+    ["images/17.jpg", "", "", "Paused"],
+    ["images/18.jpg", "", "", "Paused"],
+    ["images/19.jpg", "", "", "Paused"],
+    ["images/20.jpg", "", "", "Paused"],
+    ["images/21.jpg", "", "", "Paused"],
+    ["images/22.jpg", "", "", "Paused"],
+        ["images/0024.jpg", "", "", "Paused"],
+    ["images/0025.jpg", "", "", "Paused"],
+    ["images/0026.jpg", "", "", "Paused"],
+    ["images/0027.jpg", "", "", "Paused"],
+    ["images/0028.jpg", "", "", "Paused"],
+    ["images/0029.jpg", "", "", "Paused"],
+    ["images/0030.jpg", "", "", "Paused"],
+    ["images/0031.jpg", "", "", "Paused"],
+    ["images/0032.jpg", "", "", "Paused"],
+    ["images/0033.jpg", "", "", "Paused"],
+    ["images/0034.jpg", "", "", "Paused"],
+    ["images/0035.jpg", "", "", "Paused"],
+    ["images/0036.jpg", "", "", "Paused"],
+    ["images/0037.jpg", "", "", "Paused"],
+    ["images/0038.jpg", "", "", "Paused"],
+    ["images/0039.jpg", "", "", "Paused"],
+    ["images/0040.jpg", "", "", "Paused"],
+    ["images/0041.jpg", "", "", "Paused"],
+    ["images/0042.jpg", "", "", "Paused"],
+    ["images/0043.jpg", "", "", "Paused"],
+    ["images/0044.jpg", "", "", "Paused"],
+    ["images/0045.jpg", "", "", "Paused"],
+    ["images/0046.jpg", "", "", "Paused"],
+    ["images/0047.jpg", "", "", "Paused"],
+    ["images/0048.jpg", "", "", "Paused"],
+    ["images/0049.jpg", "", "", "Paused"],
+    ["images/0050.jpg", "", "", "Paused"]
+  ],
+  displaymode: {type:'auto', pause:3000, cycles:100, wraparound:false},
+  persist: false,
+  fadeduration: 1500,
+  descreveal: "ondemand",
+  togglerid: ""
+})
+  
+</script>
 </body>
 
 </html>
