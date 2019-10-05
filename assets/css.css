@@ -2,6 +2,10 @@ body {
   background-color: #FFFFFF;
 }
 
+.style6 {
+    color: #E9E9E9;
+}
+
 A:LINK {
     text-decoration: none;
     color: #999999;
