@@ -2,16 +2,38 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src https://www.cap-tl.com"; child-src 'none'; object-src 'none'">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
 <title>CAPTL</title>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript" src="fadeslideshow.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript" src="fadeslideshow.js">
+        /***********************************************
+         * Ultimate Fade In Slideshow v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+         * This notice MUST stay intact for legal use
+         * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+         ***********************************************/
+        http: //ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js
+    </script>
+<style type="text/css">
+<!--
+body {
+  background-color: #FFFFFF;
+}
+-->
+</style>
 <link href="/assets/css.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+<style type="text/css">
+        <!-- .style6 {
+            color: #E9E9E9
+        }
+        
+        -->
+    </style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+
 <script type="text/javascript">
-  
-   /* <![CDATA[ */
+       /* <![CDATA[ */
 
 $(function() {
 
@@ -98,47 +120,69 @@ $(document).ready(function() {
 });
 
 /* ]]> */
-</script>
+    </script>
+
 <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
 </head>
 
 <body>
-  <br>
-  <br>
+
+    <br>
+    <br>
     <table width="792" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#ffffff" bgcolor="#ffffff">
-      <tbody>
-        <tr>
-          <td class="Box">
-              <div id="slideshow" style="display: block;">
-                 <div id="controls" style="display: none;">
-                    <div id="bg"></div>
-                      <span><a href="" id="prev">prev</a></span>
-                        <!--<span id="paused">paused</span>-->
-                      <span><a href="" id="next">next</a></span>
-                          <!--<span><a href="" id="pause">Pause</a></span>
-                          <span><a href="" id="play">Play</a></span>-->
-                  </div>
+        <tbody>
+            <tr>
+                <td class="Box">
+                    <div id="slideshow" style="display: block;">
+
+                        <div id="controls" style="display: none;">
+
+                            <div id="bg"></div>
+
+                            <span><a href="" id="prev">prev</a></span>
+
+                            <!--<span id="paused">paused</span>-->
+
+                            <span><a href="" id="next">next</a></span>
+
+                            <!--<span><a href="" id="pause">Pause</a></span>
+
+        <span><a href="" id="play">Play</a></span>-->
+
+                        </div>
+
                         <div id="slides" class="pics" style="position: relative; width: 792px; height: 528px;">
                             <img src="intro-images/1.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 86; opacity: 1; width: 792px; height: 528px;">
                             <img src="intro-images/2.jpg" width="792" height="528" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 83; opacity: 0;">
                         </div>
-                </div>
-            </td>
-          </tr>
+
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
     <table width="792" align="center">
         <tbody>
             <tr>
-                <td align="left" valign="bottom" class="CaptlText"><a href="index.html">CAPTL</a></td>
+                <td align="left" valign="bottom" class="CaptlText">
+                    <a href="index.html">CAPTL</a>
+                </td>
                 <td align="right" valign="bottom" class="CaptlText"><a href="stores.asp">buy</a> &nbsp; &nbsp;<a href="contact.html">contact</a></td>
             </tr>
         </tbody>
     </table>
-<br>
-<span class="style6"></span> 
+
+    <br>
+    <span class="style6">
+  
+    </span>
+
+  
 <script type="text/javascript">
-  var mygallery=new fadeSlideShow({
+
+
+
+var mygallery=new fadeSlideShow({
   wrapperid: "slides", //ID of blank DIV on page to house Slideshow
   dimensions: [792, 528], //width/height of gallery in pixels. Should reflect dimensions of largest image
   imagearray: [ 
@@ -191,14 +235,16 @@ $(document).ready(function() {
     ["images/0048.jpg", "", "", "Paused"],
     ["images/0049.jpg", "", "", "Paused"],
     ["images/0050.jpg", "", "", "Paused"]
+    //<--no trailing comma after very last image element!
   ],
   displaymode: {type:'auto', pause:3000, cycles:100, wraparound:false},
-  persist: false,
-  fadeduration: 1500,
+  persist: false, //remember last viewed slide and recall within same session?
+  fadeduration: 1500, //transition duration (milliseconds)
   descreveal: "ondemand",
   togglerid: ""
 })
-  
+
+
 </script>
 </body>
 
