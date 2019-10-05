@@ -1,10 +1,3 @@
-/* Ultimate Fade-in slideshow (v2.1)
- * Last updated: Sept 10th, 2009. This notice must stay intact for usage 
- * Author: Dynamic Drive at http://www.dynamicdrive.com/
- * Visit http://www.dynamicdrive.com/ for full source code
- */
-
-//Oct 6th, 09' (v2.1): Adds option to randomize display order of images, via new option displaymode.randomize
 
 var fadeSlideShow_descpanel = {
     controls: [
