@@ -2,8 +2,8 @@ var mygallery=new fadeSlideShow({
   wrapperid: "slides", //ID of blank DIV on page to house Slideshow
   dimensions: [792, 528], //width/height of gallery in pixels. Should reflect dimensions of largest image
   imagearray: [ 
-    ["intro-images/1.jpg", "", "", "Paused"], 
-    ["images/2.jpg", "", "", "Paused"],
+    ["/assets/introimage.jpeg", "", "", "Paused"], 
+/*    ["images/2.jpg", "", "", "Paused"],
     ["images/3.jpg", "", "", "Paused"],
     ["images/4.jpg", "", "", "Paused"],
     ["images/5.jpg", "", "", "Paused"],
@@ -50,7 +50,7 @@ var mygallery=new fadeSlideShow({
     ["images/0047.jpg", "", "", "Paused"],
     ["images/0048.jpg", "", "", "Paused"],
     ["images/0049.jpg", "", "", "Paused"],
-    ["images/0050.jpg", "", "", "Paused"]
+    ["images/0050.jpg", "", "", "Paused"]*/
   ],
   displaymode: {type:'auto', pause:3000, cycles:100, wraparound:false},
   persist: false,
