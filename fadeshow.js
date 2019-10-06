@@ -2,7 +2,7 @@ var mygallery=new fadeSlideShow({
   wrapperid: "slides", //ID of blank DIV on page to house Slideshow
   dimensions: [792, 528], //width/height of gallery in pixels. Should reflect dimensions of largest image
   imagearray: [ 
-    ["/assets/introimage.jpeg", "", "", "Paused"], 
+    ["introimage.jpg", "", "", "Paused"], 
 /*    ["images/2.jpg", "", "", "Paused"],
     ["images/3.jpg", "", "", "Paused"],
     ["images/4.jpg", "", "", "Paused"],
