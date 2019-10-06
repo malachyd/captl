@@ -45,7 +45,7 @@ $(function() {
         function() {
             $('#controls').fadeIn();
 
-            var paused = slideshow.is(':paused');
+          //  var paused = slideshow.is(':paused');
             slideshow.cycle(paused ? 'resume' : 'pause', true);
         },
 

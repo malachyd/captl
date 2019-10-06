@@ -1,9 +1,9 @@
 
 var fadeSlideShow_descpanel = {
     controls: [
-        ['x.png', 7, 7],
-        ['restore.png', 10, 11],
-        ['loading.gif', 54, 55]
+        ['introimage.jpg', 7, 7],
+        ['introimage.jpg', 10, 11],
+        ['introimage.jpg', 54, 55]
     ], //full URL and dimensions of close, restore, and loading images
     fontStyle: 'normal 11px Verdana', //font style for text descriptions
     slidespeed: 200 //speed of description panel animation (in millisec)
