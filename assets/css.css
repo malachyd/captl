@@ -34,15 +34,6 @@ A:HOVER {
     color: #666666;
 }
 
-.CaptlText2 {
-    font-family: Helvetica;
-    font-size: 11px;
-    color: #666666;
-    top: 50%;
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
 .Box {
     border-color: #E9E9E9;
     border-width: 0px;
