@@ -38,11 +38,9 @@ A:HOVER {
     font-family: Helvetica;
     font-size: 11px;
     color: #666666;
-    position: absolute;
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-}
 }
 
 .Box {
